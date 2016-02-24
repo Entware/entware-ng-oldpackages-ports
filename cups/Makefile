@@ -206,6 +206,9 @@ define Package/cups/install
 	$(INSTALL_DIR) $(1)/opt/share/cups
 	$(CP) $(PKG_INSTALL_DIR)/opt/share/cups/templates \
 		$(1)/opt/share/cups/
+	$(INSTALL_DIR) $(1)/opt/share/doc
+    	$(CP) $(PKG_INSTALL_DIR)/opt/share/doc/cups \
+        $(1)/opt/share/doc/
 	$(INSTALL_DIR) $(1)/opt/share/cups/mime
 	$(CP) $(PKG_INSTALL_DIR)/opt/share/cups/mime/* $(1)/opt/share/cups/mime/
 	$(INSTALL_DIR) $(1)/opt/sbin
