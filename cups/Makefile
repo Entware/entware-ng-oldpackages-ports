@@ -4,16 +4,17 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
+# v2.2.1 suffers from "'ppd_file_t' does not name a type" bug in depended packages
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=cups
-PKG_VERSION:=2.2.1
+PKG_VERSION:=2.1.4
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-source.tar.gz
-PKG_SOURCE_URL:=https://github.com/apple/cups/releases/download/v$(PKG_VERSION)
-PKG_MD5SUM:=a94da2a1e9dbdccb4f3836a38a431931
+PKG_SOURCE_URL:=https://github.com/apple/cups/releases/download/release-$(PKG_VERSION)
+PKG_MD5SUM:=9f9bf6e3b9c20a3519b4dc409666d6e7
 
 include $(INCLUDE_DIR)/package.mk
 
