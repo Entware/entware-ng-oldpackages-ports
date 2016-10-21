@@ -50,6 +50,9 @@ define Package/oprofile-utils_legacy
   DEPENDS:=oprofile_legacy
 endef
 
+CONFIGURE_VARS += \
+	ac_cv_lib_bfd_bfd_openr=no
+
 define Build/Configure
 	$(call Build/Configure/Default, \
 		--with-kernel-support \
