@@ -13,7 +13,7 @@ PKG_VERSION:=2.3.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=http://www.jedsoft.org/releases/slang
+PKG_SOURCE_URL:=http://www.jedsoft.org/releases/slang/old
 PKG_MD5SUM:=3bcc790460d52db1316c20395b7ac2f1
 
 PKG_INSTALL:=1
