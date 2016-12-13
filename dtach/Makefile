@@ -4,17 +4,19 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# Abandoned in 2008
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dtach
-PKG_VERSION:=0.8
-PKG_RELEASE:=2
+PKG_VERSION:=0.9
+PKG_REV:=7acac922770597f5da5df7b290078770d20dac32
+PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=@SF/dtach
-PKG_MD5SUM:=ec5999f3b6bb67da19754fcb2e5221f3
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE_URL:=https://github.com/crigler/dtach.git
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_VERSION:=$(PKG_REV)
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -26,11 +28,11 @@ define Package/dtach
 endef
 
 define Package/dtach/description
-	dtach is a tiny program that emulates the detach feature of screen,
-	allowing you to run a program in an environment that is protected from
-	the controlling terminal and attach to it later. dtach does not keep
-	track of the contents of the screen, and thus works best with programs
-	that know how to redraw themselves.
+ dtach is a tiny program that emulates the detach feature of screen,
+ allowing you to run a program in an environment that is protected from
+ the controlling terminal and attach to it later. dtach does not keep
+ track of the contents of the screen, and thus works best with programs
+ that know how to redraw themselves.
 endef
 
 define Package/dtach/install
