@@ -4,19 +4,18 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# Aandoned in 2011
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ncftp
-PKG_VERSION:=3.2.5
+PKG_VERSION:=3.2.6
 PKG_RELEASE:=1
 
 PKG_INSTALL:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-src.tar.bz2
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-src.tar.gz
 PKG_SOURCE_URL:=ftp://ftp.ncftp.com/ncftp
-PKG_MD5SUM:=b05c7a6d5269c04891f02f43d4312b30
+PKG_MD5SUM:=e7cce57ef6274d4c7433ffe28ffe0a71
 
 include $(INCLUDE_DIR)/package.mk
 
