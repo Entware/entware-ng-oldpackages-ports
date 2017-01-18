@@ -39,6 +39,7 @@ CONFIGURE_ARGS += \
 	--disable-pp-build \
 	--disable-doc-build \
 	--disable-foomatic-xml-install \
+	--enable-cups-ppd-install \
 	--with-cupsbackenddir=/opt/lib/cups/backend \
 	--with-cupsfilterdir=/opt/lib/cups/filter \
 	--with-icondir=/opt/var \
