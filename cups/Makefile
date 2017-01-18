@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=cups
 PKG_VERSION:=2.1.4
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-source.tar.gz
 PKG_SOURCE_URL:=https://github.com/apple/cups/releases/download/release-$(PKG_VERSION)
@@ -207,8 +207,8 @@ define Package/cups/install
 	$(CP) $(PKG_INSTALL_DIR)/opt/share/cups/templates \
 		$(1)/opt/share/cups/
 	$(INSTALL_DIR) $(1)/opt/share/doc
-    	$(CP) $(PKG_INSTALL_DIR)/opt/share/doc/cups \
-        $(1)/opt/share/doc/
+	$(CP) $(PKG_INSTALL_DIR)/opt/share/doc/cups \
+		$(1)/opt/share/doc/
 	$(INSTALL_DIR) $(1)/opt/share/cups/mime
 	$(CP) $(PKG_INSTALL_DIR)/opt/share/cups/mime/* $(1)/opt/share/cups/mime/
 	$(INSTALL_DIR) $(1)/opt/sbin
