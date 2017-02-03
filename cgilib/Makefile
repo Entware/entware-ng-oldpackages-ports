@@ -19,8 +19,6 @@ PKG_MD5SUM:=2c7053f58dfb06f7a80a112797ed7e86
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 
-LIBTOOL="$(STAGING_DIR)/host/bin/libtool"
-
 include $(INCLUDE_DIR)/package.mk
 
 define Package/cgilib
