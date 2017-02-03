@@ -156,6 +156,7 @@ define Build/Configure
 		--with-cups-user="nobody" \
 		--with-cups-group="nogroup" \
 		--with-components="embedded" \
+		--with-cupsd-file-perm="0700" \
 		--without-java \
 		--without-perl \
 		--without-python \
