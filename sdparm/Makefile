@@ -23,7 +23,7 @@ define Package/sdparm
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Read or modify SCSI or USB disk parameters
-  SUBMENU:=disc
+  SUBMENU:=Disc
   URL:=http://sg.danny.cz/sg/sdparm.html
 endef
 
