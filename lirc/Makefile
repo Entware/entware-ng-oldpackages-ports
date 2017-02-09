@@ -18,6 +18,7 @@ PKG_MD5SUM:=9e3f2869a47bbd7c973dd63f30c13fc2
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
+PKG_BUILD_DEPENDS:=python3/host
 
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
