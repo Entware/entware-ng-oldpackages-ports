@@ -4,16 +4,22 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
+# We are using current snapshot tar ball, because GIT source is too slow
+# to rely on it.
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=elinks
-PKG_VERSION:=0.12pre6
-PKG_RELEASE:=1a
+PKG_VERSION:=0.13
+PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE:=$(PKG_NAME)-current-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://elinks.or.cz/download
-PKG_MD5SUM:=3d0962f4b65fb039342fefd3ada050a9
+PKG_HASH:=d221cf123c343b2e84a7319a8b3c466498e145ddf3339dff6eff523cc27fe6ab
+
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+
+PKG_UNPACK=$(HOST_TAR) -C $(PKG_BUILD_DIR) --strip-components=1 -xf $(DL_DIR)/$(PKG_SOURCE)
 
 PKG_FIXUP:=autoreconf
 
