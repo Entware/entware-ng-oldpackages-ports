@@ -146,6 +146,7 @@ define Package/php5-fpm/description
   This package contains the FastCGI Process Manager of the PHP5 interpreter.
 endef
 
+TARGET_CXXFLAGS += -std=c++0x
 TARGET_LDFLAGS += -lpthread
 
 CONFIGURE_ARGS+= \
@@ -164,7 +165,7 @@ CONFIGURE_ARGS+= \
 	--disable-short-tags \
 	\
 	--with-zlib="$(STAGING_DIR)/opt" \
-	  --with-zlib-dir="$(STAGING_DIR)/opt" \
+	 --with-zlib-dir="$(STAGING_DIR)/opt" \
 	--with-pcre-regex="$(STAGING_DIR)/opt" \
 	--disable-phar
 
