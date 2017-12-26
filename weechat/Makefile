@@ -9,12 +9,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=weechat
-PKG_VERSION:=1.9
+PKG_VERSION:=2.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.weechat.org/files/src
-PKG_HASH:=8c924a71a35becb169b9e0a6b4628997503f30a74563c0e2d0bdf55dbb82d675
+PKG_HASH:=b6e1ea2ca6c70d6909d2a52da386d60f6c22478de128b05ded844c318fa1a149
 
 PKG_BUILD_DEPENDS:=perl python
 
@@ -46,8 +46,8 @@ CMAKE_OPTIONS+= \
 	-DPYTHON_INCLUDE_PATH="$(STAGING_DIR)/opt/include/python2.7" \
 	-DPYTHON_LIBRARY="$(STAGING_DIR)/opt/lib/libpython2.7.so" \
 	-DPERL_EXECUTABLE:FILEPATH="$(STAGING_DIR)/host/bin/perl" \
-	-DPERL_INCLUDE_PATH="$(STAGING_DIR)/opt/lib/perl5/5.24/CORE" \
-	-DPERL_LIBRARY="$(STAGING_DIR)/opt/lib/perl5/5.24/CORE/libperl.so" \
+	-DPERL_INCLUDE_PATH="$(STAGING_DIR)/opt/lib/perl5/5.26/CORE" \
+	-DPERL_LIBRARY="$(STAGING_DIR)/opt/lib/perl5/5.26/CORE/libperl.so" \
 	-DENABLE_JAVASCRIPT=OFF \
 	-DENABLE_LUA=OFF \
 	-DENABLE_GUILE=OFF \

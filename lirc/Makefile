@@ -66,7 +66,7 @@ define Package/lirc/install
 	$(CP) $(PKG_INSTALL_DIR)/opt/lib/*.so* $(1)/opt/lib
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/lib/lirc/plugins/*.so \
 	    $(1)/opt/lib/lirc/plugins
-	$(INSTALL_DIR) $(1)/opt/var/run/lirc  $(1)/opt/share/lirc/configs
+	$(INSTALL_DIR) $(1)/opt/var/run/lirc $(1)/opt/share/lirc/configs
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/opt/share/lirc/configs/*.conf \
 	    $(1)/opt/share/lirc/configs
 endef
