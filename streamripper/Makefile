@@ -16,7 +16,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/$(PKG_NAME)/streamripper%20(current)/$(PKG_VERSION)
 PKG_MD5SUM:=a37a1a8b8f9228522196a122a1c2dd32
 
-PKG_FIXUP:=autoreconf
+PKG_FIXUP:=autoreconf -fi
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
