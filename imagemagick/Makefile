@@ -135,6 +135,9 @@ define Package/imagemagick-tools/install
 	$(CP) \
 		$(PKG_INSTALL_DIR)/opt/bin/{animate,compare,composite,conjure,convert,display,identify,import,magick,magick-script,mogrify,montage,stream} \
 		$(1)/opt/bin/
+	$(INSTALL_DIR) $(1)/opt/etc/ImageMagick-7
+	$(CP) $(PKG_INSTALL_DIR)/opt/etc/ImageMagick-7/*.xml $(1)/opt/etc/ImageMagick-7/
+
 endef
 
 define BuildPlugin
