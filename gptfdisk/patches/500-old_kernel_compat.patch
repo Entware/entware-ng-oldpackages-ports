@@ -1,0 +1,11 @@
+--- a/diskio-unix.cc
++++ b/diskio-unix.cc
+@@ -202,7 +202,7 @@
+    } // if
+ 
+    if (isOpen) {
+-#if defined __linux__ && !defined(EFI)
++#if defined __linux__ && !defined(EFI) && !defined(__UCLIBC__)
+       err = ioctl(fd, BLKPBSZGET, &physBlockSize);
+ #endif
+    } // if (isOpen)
