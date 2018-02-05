@@ -1,18 +1,3 @@
---- a/modules/mod_auth_unix.c
-+++ b/modules/mod_auth_unix.c
-@@ -101,10 +101,10 @@
- 
- module auth_unix_module;
- 
--static const char *pwdfname = "/etc/passwd";
-+static const char *pwdfname = "/opt/etc/passwd";
- static FILE *pwdf = NULL;
- 
--static const char *grpfname = "/etc/group";
-+static const char *grpfname = "/opt/etc/group";
- static FILE *grpf = NULL;
- 
- static int unix_persistent_passwd = FALSE;
 --- a/include/default_paths.h
 +++ b/include/default_paths.h
 @@ -35,7 +35,7 @@
